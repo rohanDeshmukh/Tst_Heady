@@ -10,6 +10,8 @@ import Foundation
 import Realm
 import RealmSwift
 
+// Bypassed Single Responsibility Class principle due to my wify
+
 // MARK: - ResultBaseParser
 @objcMembers class ResultBaseParser: Codable {
     dynamic var categories: [Category]?
@@ -25,7 +27,7 @@ import RealmSwift
 @objcMembers class Category: Object, Codable {
     
     dynamic var id: Int = 0
-    dynamic var name: String?
+    dynamic var name: String? = nil
     
     var products = List<CategoryProduct>()
     var childCategories = List<Int>()

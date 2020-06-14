@@ -39,4 +39,9 @@ class CategoryTableViewCell: UITableViewCell {
             self.lblCategoryDisplay.text = "Not there"
         }
     }
+    
+    public func setVariantData(variantObj: Variant) {
+        let catePName = "Color:\(variantObj.color ?? "NA") Size:\(variantObj.size ?? 0) Price:\(variantObj.price ?? 0)"
+        self.lblCategoryDisplay.text = catePName
+    }
 }

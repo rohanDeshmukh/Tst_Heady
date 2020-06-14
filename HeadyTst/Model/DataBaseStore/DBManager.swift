@@ -49,12 +49,17 @@ class DBManager: NSObject {
         return Array(subCate!)
     }
     
-    func getSpecificProductDetails (productId: Int) -> Array<Any> {
+    func getSpecificProductDetails (productId: Int) -> CategoryProduct {
         let realm = try! Realm()
         // IT should be sort by date added for ecom app
-        let prodDetails = realm.objects(CategoryProduct.self).sorted(byKeyPath: "id", ascending: true)
-        return Array(prodDetails)
+        let prodDetails = realm.object(ofType: CategoryProduct.self, forPrimaryKey: productId)
+        return prodDetails!
     }
     
+    func getVariantsForProduct(productID: Int) -> Array<Any>{
+        let realm = try! Realm()
+        let variantArr = realm.object(ofType: CategoryProduct.self, forPrimaryKey: productID)?.variants
+        return Array(variantArr!)
+    }
     
 }

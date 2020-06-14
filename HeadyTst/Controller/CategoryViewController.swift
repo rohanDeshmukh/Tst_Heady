@@ -64,6 +64,7 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let cateListVc = storyBoard.instantiateViewController(withIdentifier: "CategoryListingViewController") as! CategoryListingViewController
         cateListVc.mainCateId = category.id
+        cateListVc.categoryName = category.name!
         self.navigationController?.pushViewController(cateListVc, animated:true)
     }
 }

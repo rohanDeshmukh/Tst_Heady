@@ -14,13 +14,14 @@ class CategoryListingViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var tblSubCategories: UITableView!
     
     var mainCateId:Int = 0
+    var categoryName:String = ""
     
     var arrSubCate:Array<Any> = []
     var arrProducts:Array<Any> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Category Details"
+        self.title = categoryName
         
         // Do any additional setup after loading the view.
         arrSubCate  = DBManager.sharedInstance.getSubCategoriesForCategory(categoryId: mainCateId)
@@ -84,10 +85,12 @@ class CategoryListingViewController: UIViewController, UITableViewDelegate, UITa
                 self.navigationController?.pushViewController(cateListVc, animated:true)
             }
         }else {
-            let product:CategoryProduct = self.arrProducts[indexPath.row] as! CategoryProduct
-            let cateListVc = storyBoard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
-            cateListVc.productId = product.id
-            self.navigationController?.pushViewController(cateListVc, animated:true)
+            if self.arrProducts.count > 0 {
+                let product:CategoryProduct = self.arrProducts[indexPath.row] as! CategoryProduct
+                let cateListVc = storyBoard.instantiateViewController(withIdentifier: "ProductViewController") as! ProductViewController
+                cateListVc.productId = product.id
+                self.navigationController?.pushViewController(cateListVc, animated:true)
+            }
         }
         
     }

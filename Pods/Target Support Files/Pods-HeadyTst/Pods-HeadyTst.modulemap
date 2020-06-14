@@ -1,0 +1,6 @@
+framework module Pods_HeadyTst {
+  umbrella header "Pods-HeadyTst-umbrella.h"
+
+  export *
+  module * { export * }
+}

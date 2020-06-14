@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A38E6F14-C2E0-4F31-8CE6-F1B2E14639F4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "165C239F-451F-4927-BE5B-8439DBFCFD99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeadyTst/Controller/Api Service/ApiHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchResultData(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A0CB18B3-5008-4CEB-8800-1C18D54551A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeadyTst/Controller/Api Service/ApiHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchResultData(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "85D8ACB4-AAC6-45B7-8421-85D6888C81AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HeadyTst/Controller/Api Service/ApiHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "fetchResultData(callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "85D8ACB4-AAC6-45B7-8421-85D6888C81AB - 4ce36a145baa7a82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in HeadyTst.ApiHelper.fetchResultData(callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "HeadyTst"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Relocated%20Items/Security/Rohan/projects/iOS%20Test/HeadyTest/HeadyTst/HeadyTst/Controller/Api%20Service/ApiHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1068">
+               </Location>
+               <Location
+                  uuid = "85D8ACB4-AAC6-45B7-8421-85D6888C81AB - a188544b1630acf5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;()&gt; in closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in HeadyTst.ApiHelper.fetchResultData(callback: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "HeadyTst"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shared/Relocated%20Items/Security/Rohan/projects/iOS%20Test/HeadyTest/HeadyTst/HeadyTst/Controller/Api%20Service/ApiHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "43">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "D2599BAD-A24C-4205-A663-EC5AB444534E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "AFDF83D4-8A02-4C8C-9AF7-60589195C4B7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

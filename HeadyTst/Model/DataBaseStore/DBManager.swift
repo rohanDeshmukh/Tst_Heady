@@ -13,6 +13,7 @@ import RealmSwift
 class DBManager: NSObject {
 
     static let sharedInstance = DBManager()
+    var allCategories:Results<Category>? = nil
     
     private override init() {
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -28,7 +29,32 @@ class DBManager: NSObject {
     
     func getAllCategories() -> Array<Any> {
         let realm = try! Realm()
-        let allCategories = realm.objects(Category.self).sorted(byKeyPath: "id", ascending: true)
-        return Array(allCategories)
+        self.allCategories = realm.objects(Category.self).sorted(byKeyPath: "id", ascending: true)
+        return Array(self.allCategories!)
     }
+    
+    func getSubCategoriesForCategory(categoryId: Int) -> Array<Any>{
+        let realm = try! Realm()
+        let subCate = realm.object(ofType: Category.self, forPrimaryKey: categoryId)?.childCategories
+        var subCateArr:Results<Category>? = nil
+        if let subCateData = subCate {
+            subCateArr = self.allCategories?.filter("id IN %@", subCateData)
+        }
+        return Array(subCateArr!)
+    }
+    
+    func getProductsForCategory(categoryId: Int) -> Array<Any>{
+        let realm = try! Realm()
+        let subCate = realm.object(ofType: Category.self, forPrimaryKey: categoryId)?.products
+        return Array(subCate!)
+    }
+    
+    func getSpecificProductDetails (productId: Int) -> Array<Any> {
+        let realm = try! Realm()
+        // IT should be sort by date added for ecom app
+        let prodDetails = realm.objects(CategoryProduct.self).sorted(byKeyPath: "id", ascending: true)
+        return Array(prodDetails)
+    }
+    
+    
 }

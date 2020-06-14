@@ -10,7 +10,7 @@ import Foundation
 import Realm
 import RealmSwift
 
-// Bypassed Single Responsibility Class principle due to my wify
+// Bypassed Single Responsibility Class principle
 
 // MARK: - ResultBaseParser
 @objcMembers class ResultBaseParser: Codable {

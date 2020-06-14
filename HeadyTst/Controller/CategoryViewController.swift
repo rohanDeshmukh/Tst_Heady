@@ -40,14 +40,30 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrCate.count
+        if self.arrCate.count > 0 {
+            return self.arrCate.count
+        }else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CategoryTableViewCell = tblCategory.dequeueReusableCell(withIdentifier: "CategoryTableViewCell") as! CategoryTableViewCell
-        cell.setCategoryData(category: self.arrCate[indexPath.row] as! Category)
+        if self.arrCate.count > 0{
+            cell.setCategoryData(category: self.arrCate[indexPath.row] as! Category)
+        }else {
+            cell.lblCategoryDisplay.text = "No category to display"
+        }
         return cell as UITableViewCell;
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category:Category = self.arrCate[indexPath.row] as! Category
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let cateListVc = storyBoard.instantiateViewController(withIdentifier: "CategoryListingViewController") as! CategoryListingViewController
+        cateListVc.mainCateId = category.id
+        self.navigationController?.pushViewController(cateListVc, animated:true)
     }
 }

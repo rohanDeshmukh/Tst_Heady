@@ -30,4 +30,13 @@ class CategoryTableViewCell: UITableViewCell {
             self.lblCategoryDisplay.text = "Not there"
         }
     }
+    
+    public func setProductData(categoryProd: CategoryProduct) {
+        let catePName = categoryProd.name
+        if catePName != nil {
+            self.lblCategoryDisplay.text = catePName
+        }else {
+            self.lblCategoryDisplay.text = "Not there"
+        }
+    }
 }

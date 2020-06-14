@@ -20,18 +20,13 @@ class ApiHelper: NSObject {
     func fetchResultData(callback: @escaping (Bool) -> Void){
     Alamofire.request("https://stark-spire-93433.herokuapp.com/json").responseData(completionHandler: {response in
         
-//        debugPrint("fetchResultData \(response)")
             print(Realm.Configuration.defaultConfiguration.fileURL!)
 
             if let results:ResultBaseParser = JSONDecoder().decodeResponse(from: response){
                 let realm = try! Realm()
                 try! realm.write {
-//                    realm.add(results, update: Realm.UpdatePolicy.all)
-//                    realm.add(results.categories!,update: Realm.UpdatePolicy.all)
-                    results.categories?.forEach({ (category:Category) in
-                        print("all category ID \(String(describing: category.id))")
-                        realm.add(category, update: .error)
-                    })
+                    realm.add(results.categories!, update: Realm.UpdatePolicy.all)
+                    realm.add(results.rankings!, update: Realm.UpdatePolicy.all)
                 }
             }
         })

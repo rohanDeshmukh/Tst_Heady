@@ -50,8 +50,4 @@ class CategoryViewController: UIViewController, UITableViewDelegate, UITableView
         return cell as UITableViewCell;
         
     }
-    
-    
-    
-    
 }

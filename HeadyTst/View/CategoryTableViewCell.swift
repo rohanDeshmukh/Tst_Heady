@@ -22,7 +22,6 @@ class CategoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     public func setCategoryData(category: Category) {
         let cateName = category.name
         if cateName != nil {
@@ -31,5 +30,4 @@ class CategoryTableViewCell: UITableViewCell {
             self.lblCategoryDisplay.text = "Not there"
         }
     }
-    
 }
